@@ -1,0 +1,26 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.7;
+
+contract ArithmeticOperations {
+    
+    // Function to add two numbers
+    function add(uint a, uint b) external pure returns (uint) {
+        return a + b;
+    }
+
+    // Function to subtract the second number from the first number
+    function subtract(uint a, uint b) external pure returns (uint) {
+        require(b <= a, "Subtraction would result in a negative number");
+        return a - b;
+    }
+
+    // Function to multiply two numbers
+    function multiply(uint a, uint b) external pure returns (uint) {
+        return a * b;
+    }
+
+    // Function to divide the first number by the second number
+    function divide(uint a, uint b) external pure returns (uint) {
+        return a / b; //"Division by zero is not allowed"
+    }
+}
